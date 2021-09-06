@@ -60,7 +60,7 @@
         {
             "default":{"csop":"szakok"},
             "csop1":{"ora":"Biosz","terem":"Biosz"},
-            "csop2":{"ora":"Matek","terem":"Bi1"}
+            "csop2":{"ora":"Matek","terem":"Biosz1"}
         },
         {
             "default":{"csop":"szakok"},
@@ -80,7 +80,7 @@
             #ide angol encode
         },
         {
-                "default":{"csop":"mono","ora":"Nyelvtan","terem":"U1"}
+            "default":{"csop":"mono","ora":"Nyelvtan","terem":"U1"}
         },
         {
             "default":{"csop":"szakok"},
@@ -109,7 +109,49 @@
         },
     ],
     #csüt:
-    [],
+    [
+        {
+            "default":{"csop":"mono","ora":"Ofő","terem":"Nyelvi"}
+        },
+        {
+            "default":{"csop":"mono","ora":"Rajz","terem":"Rajz"}
+        },
+        {
+            "default":{"csop":"mono","ora":"Fizika","terem":"Fizika"}
+        },
+        {
+            "default":{"csop":"mono","ora":"Föci","terem":"Föci"}
+        },
+        {
+            "default":{"csop":"szakok"},
+            "csop1":{"ora":"Kémia","terem":"Labor2"},
+            "csop2":{"ora":"Matek","terem":"Páldi"}
+        },
+        {
+            "default":{"csop":"mono","ora":"Töri","terem":"Töri"}
+        },
+        {
+            "default":{"csop":"masodikiny"},
+            #ide második idegennyelv encode
+        },
+    ],
     #péntek:
-    []
+    [
+        {
+            "default":{"csop":"mono","ora":"Irodalom","terem":"Finn"}
+        },
+        {
+            "default":{"csop":"mono","ora":"Ének","terem":"Ének"}
+        },
+        {
+            "default":{"csop":"fl"},
+            "fiu":{"ora":"Tesi","terem":"Udvar"},
+            "lany":{"ora":"Tesi","terem":"Kondi"},
+        },
+        {
+            "default":{"csop":"szakok"},
+            "csop1":{"ora":"Infó","terem":"Tech"},
+            "csop2":{"ora":"Infó","terem":"Számtech"}
+        },
+    ]
 ]

@@ -32,7 +32,7 @@
             "csop2":{"ora":"Infó","terem":"Számtech"}
         },
         {
-            "default":{"csop":"mono","ora":"Magyar","terem":"Páldi"}
+            "default":{"csop":"mono","ora":"Irodalom","terem":"Páldi"}
         },
     ],
     #kedd:
@@ -80,7 +80,7 @@
             #ide angol encode
         },
         {
-                "default":{"csop":"mono","ora":"Magyar","terem":"U1"}
+                "default":{"csop":"mono","ora":"Nyelvtan","terem":"U1"}
         },
         {
             "default":{"csop":"szakok"},

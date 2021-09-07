@@ -11,3 +11,4 @@
                     return()
             else:
                 words.pop(0)
+                #teszt

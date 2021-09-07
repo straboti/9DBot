@@ -12,5 +12,3 @@ async def on_message(message):
     return
   
 client.run(discordToken)
-
-###f

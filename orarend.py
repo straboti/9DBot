@@ -1,4 +1,5 @@
-﻿órák = [
+﻿
+órák = [
     #hétfő:
     [
         #Órák: 
@@ -155,4 +156,6 @@
         },
     ]
 ]
-#uptodate
+def melyikOra(nap,ora,nem,szak,einy,miny):
+    napok = ["h","k","sz","cs","p"]
+    retVal = órák

@@ -10,10 +10,6 @@ client = discord.Client()
 async def on_message(message):
   if message.author == client.user:
     return
-  for n in intents["kovora"]:
-    if message.content.startswith(n):
-      await message.channel.send("Cél észlelve: Következő óra")
-
 client.run(discordToken)
 
 ###

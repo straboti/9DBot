@@ -1,0 +1,15 @@
+﻿{
+    "content": "Tessék, itt vannak a bothoz tartozó parancsok. Remélem ez segít, ha nem, szólj Botinak.",
+    "embeds": [
+      {
+        "title": "9D Bot",
+        "color": 5814783,
+        "fields": [
+          {
+            "name": "Help",
+            "value": "`~help` - Általános segítség (ez a menü).\n`~help orak` - Segítség oldal az órák lekéréséhez."
+          }
+        ]
+      }
+    ]
+  }

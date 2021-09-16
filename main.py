@@ -1,4 +1,5 @@
 ﻿import discord
+from textanalyzer import *
 
 token = str(open(".token","r").read()[3:])
 class MyClient(discord.Client):
@@ -9,9 +10,7 @@ class MyClient(discord.Client):
         # don't respond to ourselves
         if message.author == self.user:
             return
-
-        if message.content == 'ping':
-            await message.channel.send('pong')
+        await message.channel.send(analyze(message.content))
 
 client = MyClient()
 client.run(token)

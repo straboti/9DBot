@@ -1,4 +1,5 @@
-﻿def getIntent(text,triggerwords,searchwords):
+﻿
+def getIntent(text,triggerwords,searchwords):
     words = str(text).split()
     for n in words:
         for i in list(triggerwords):
@@ -8,6 +9,12 @@
                 for b in list(searchwords):
                     bias += words.count(b)
                 if bias > round(len(words) * 0,75):
-                    return()
+                    return(True)
+                else:
+                    return(False)
             else:
-                words.pop(0)
+                if len(words) > 0:
+                    words.pop(0)
+                else:
+                    return(False)
+    return(False)

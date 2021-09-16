@@ -1,14 +1,17 @@
-﻿import discord 
-from discord.ext import commands
-import datetime
+﻿import discord
 
-discordToken = open("token.txt","r").read
+token = str(open(".token","r").read()[3:])
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Bejelentkezve:', self.user)
 
-client = discord.Client()
+    async def on_message(self, message):
+        # don't respond to ourselves
+        if message.author == self.user:
+            return
 
-@client.event
-async def on_message(message):
-  if message.author == client.user:
-    return
-  
-client.run(discordToken)
+        if message.content == 'ping':
+            await message.channel.send('pong')
+
+client = MyClient()
+client.run(token)

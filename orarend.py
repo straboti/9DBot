@@ -51,12 +51,21 @@
         },
         {
             "default":{"csop":"masodikiny"},
-            #ide második idegennyelv encode
-
+            "frc":{"ora":"Francia","terem":"Cs2"},
+            "frm":{"ora":"Francia","terem":"Nyelvi"},
+            "or":{"ora":"Orosz","terem":"Nyelvi 2"},
+            "nk":{"ora":"Német","terem":"B1/1"},
+            "nh":{"ora":"Német","terem":"Macs"},
         },
         {
-            "default":{"csop":"angol"}
-            #ide angol encode
+            "default":{"csop":"angol"},
+            "ba":{"ora":"Angol","terem":"Ének"},
+            "csk":{"ora":"Angol","terem":"B1"},
+            "ve":{"ora":"Angol","terem":"A3/1"},
+            "kj":{"ora":"Angol","terem":"Cs2"},
+            "mz":{"ora":"Angol","terem":"Társalgó"},
+            "me":{"ora":"Angol","terem":"Nyelvi 2"},
+            "vi":{"ora":"Angol","terem":"Földszint 2"},
         },
         {
             "default":{"csop":"szakok"},
@@ -77,8 +86,14 @@
             "csop2":{"ora":"Infó","terem":"Számtech"}
         },
         {
-            "default":{"csop":"angol"}
-            #ide angol encode
+            "default":{"csop":"angol"},
+            "ba":{"ora":"Angol","terem":"A3/1"},
+            "csk":{"ora":"Angol","terem":"Társalgó"},
+            "ve":{"ora":"Angol","terem":"Cs1"},
+            "kj":{"ora":"Angol","terem":"A3/2"},
+            "mz":{"ora":"Angol","terem":"Nyelvi 2"},
+            "me":{"ora":"Angol","terem":"Nyelvi 1"},
+            "vi":{"ora":"Angol","terem":"Cs2"},
         },
         {
             "default":{"csop":"mono","ora":"Nyelvtan","terem":"U1"}
@@ -95,8 +110,11 @@
         },
         {
             "default":{"csop":"masodikiny"},
-            #ide második idegennyelv encode
-
+            "frc":{"ora":"Francia","terem":"Macs"},
+            "frm":{"ora":"Francia","terem":"Cs2"},
+            "or":{"ora":"Orosz","terem":"Fizika"},
+            "nk":{"ora":"Német","terem":"A3/1"},
+            "nh":{"ora":"Német","terem":"Fsz2"},
         },
         {
             "default":{"csop":"fl"},
@@ -133,7 +151,11 @@
         },
         {
             "default":{"csop":"masodikiny"},
-            #ide második idegennyelv encode
+            "frc":{"ora":"Francia","terem":"Nyelvi"},
+            "frm":{"ora":"Francia","terem":"A3/2"},
+            "or":{"ora":"Orosz","terem":"Történelem"},
+            "nk":{"ora":"Német","terem":"Földszint 1"},
+            "nh":{"ora":"Német","terem":"Nyelvi 2"},
         },
     ],
     #péntek:
@@ -158,4 +180,16 @@
 ]
 def melyikOra(nap,ora,nem,szak,einy,miny):
     napok = ["h","k","sz","cs","p"]
-    retVal = órák
+    currentData = órák
+    currentData = currentData[napok.index[nap]]
+    currentData = dict(currentData[órák])
+    returnVal = []
+    if currentData["default"]["csop"] == "mono":
+        currentData = currentData["default"]
+        returnVal.append(currentData["ora"]) 
+        returnVal.append(currentData["terem"])
+    elif currentData["default"]["csop"] == "fl":
+        if nem == "fiu":
+            pass
+        else:
+            pass

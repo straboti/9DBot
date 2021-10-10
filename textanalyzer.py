@@ -1,5 +1,4 @@
-﻿from logging import StringTemplateStyle
-from textdetector import *
+﻿from textdetector import *
 def analyze(string):
     string = str(string)
     string = string.lower()

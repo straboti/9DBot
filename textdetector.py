@@ -1,5 +1,4 @@
-﻿
-def getIntent(text,triggerwords,searchwords):
+﻿def getIntent(text,triggerwords,searchwords):
     words = str(text).split()
     for n in words:
         for i in list(triggerwords):

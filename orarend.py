@@ -182,14 +182,16 @@ def melyikOra(nap,ora,nem,szak,einy,miny):
     napok = ["h","k","sz","cs","p"]
     currentData = órák
     currentData = currentData[napok.index[nap]]
+    currentData = currentData[ora]
     currentData = dict(currentData[órák])
-    returnVal = []
     if currentData["default"]["csop"] == "mono":
         currentData = currentData["default"]
-        returnVal.append(currentData["ora"]) 
-        returnVal.append(currentData["terem"])
     elif currentData["default"]["csop"] == "fl":
-        if nem == "fiu":
-            pass
-        else:
-            pass
+        currentData = currentData[nem]
+    elif currentData["default"]["csop"] == "szakok":
+        currentData = currentData[szak]
+    elif currentData["default"]["csop"] == "angol":
+        currentData = currentData[einy]
+    elif currentData["default"]["csop"] == "angol":
+        currentData = currentData[miny]
+    return(str("A kért óra: ",str(currentData["ora"]), ", a(z) ",str(currentData["terem"], "teremben.")))
